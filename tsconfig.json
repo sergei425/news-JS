@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "strict": true,
     "noImplicitAny": true,
     "module": "commonjs",
     "moduleResolution": "bundler",
