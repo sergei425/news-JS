@@ -5,7 +5,8 @@
     "module": "commonjs",
     "moduleResolution": "bundler",
     "target": "esnext",
-    "allowJs": true
+    "allowJs": true,
+    "noEmit": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
