@@ -3,11 +3,7 @@ import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
     getSources(callback: () => void) {
-        super.getResp(
-            'sources',
-            {},
-            callback
-        );
+        super.getResp('sources', {}, callback);
     }
 
     getNews(e: Event, callback: (data: NewsApi[]) => void) {
@@ -21,8 +17,10 @@ class AppController extends AppLoader {
                 if (newsContainer.getAttribute('data-source') !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
                     super.getResp(
-                        `everything?sources=${sourceId}`,
-                        {},
+                        'everything',
+                        {
+                            sources: sourceId,
+                        },
                         callback
                     );
                 }
