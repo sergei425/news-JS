@@ -5,7 +5,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import DotenvWebpackPlugin from 'dotenv-webpack';
 
-const baseConfig: Configuration = {
+const baseConfig: Configuration & {
+    devServer: { static: { directory: string } };
+} = {
     entry: path.resolve(__dirname, './src/index.ts'),
     mode: 'development',
     module: {
@@ -27,6 +29,11 @@ const baseConfig: Configuration = {
         }),
         new CleanWebpackPlugin(),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist"),
+        },
+    },
 };
 
 export default async (
