@@ -21,15 +21,39 @@ footer {
 }
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #b7b0b0;
     text-align: center;
 }
 footer .copyright a {
-    color: #444;
+    color: #b7b0b0;
 }
 footer .copyright a:hover {
-    color: #555;
+    color: #9a93e6;
 }
-footer .copyright:before {
-    content: '©';
-}
+.footer {
+  padding: 0 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .github,
+  .rsshool {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    svg {
+        width: 35px;
+    }
+
+    span {
+        font-size: 18px;
+        color: #a5c03b;
+    }
+  }
+} 
