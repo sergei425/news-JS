@@ -938,7 +938,7 @@ const loader_1 = __importDefault(__webpack_require__(/*! ./loader */ "./src/comp
 class AppLoader extends loader_1.default {
     constructor() {
         super("https://newsapi.org/v2/", {
-            apiKey: "00b62fedefbe4d9e8042041c74277742",
+            apiKey: "0ccf781575ee4d4c894e6afa814208bd",
         });
     }
 }
